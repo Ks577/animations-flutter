@@ -4,7 +4,7 @@ A Flutter app to explore beautiful places around the world with smooth animation
 
 ## 📸 Demo / Preview
 
-GIFs may take a few seconds to load. If they don't appear immediately - refresh the page.
+GIFs may take a few seconds to load. If they don't appear immediately &mdash; refresh the page.
 
 ---
 
