@@ -1,9 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/core/responsive/responsive.dart';
 import 'dart:async';
-import '../const/colors.dart';
-import '../const/text_style.dart';
-import 'list_screen.dart';
+import '../../core/theme/app_colors.dart';
+import '../../core/theme/app_text_style.dart';
+import '../wonders_list/list_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -69,15 +70,15 @@ class _SplashScreenState extends State<SplashScreen>
           child: Stack(
             children: [
               Positioned(
-                top: 6,
+                top: ResponsiveHelper.pad(context, 0.015),
+                right: 0,
                 left: 0,
-                right: 8,
                 child: RotationTransition(
                   turns: _rotationController,
                   child: Image.asset(
                     'assets/images/cloud.png',
-                    width: 700.0,
-                    height: 300.0,
+                    width: ResponsiveHelper.image(context, 1.75),
+                    height: ResponsiveHelper.image(context, 0.75),
                   ),
                 ),
               ),
@@ -88,7 +89,7 @@ class _SplashScreenState extends State<SplashScreen>
                   animatedTexts: [
                     ColorizeAnimatedText(
                       'Wonders of nature',
-                      textStyle: colorizeTextStyle,
+                      textStyle: AppTextStyle.splashText(context),
                       colors: gradientColorsShimmer,
                     ),
                   ],

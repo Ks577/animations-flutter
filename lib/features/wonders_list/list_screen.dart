@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../data/wonders_data.dart';
-import '../models/item_model.dart';
-import '../widgets/app_bar_style.dart';
-import '../widgets/card_style.dart';
+import 'package:flutter_animations/core/responsive/responsive.dart';
+import '../../data/wonder_data.dart';
+import '../../data/wonder_model.dart';
+import '../../core/widgets/app_bar_style.dart';
+import 'wonder_card.dart';
 
 class ListScreen extends StatefulWidget {
   const ListScreen({super.key});
@@ -37,7 +38,10 @@ class _ListScreenState extends State<ListScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Wonders of nature"),
+        title: const Text(
+          "Wonders of nature",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
         flexibleSpace: const StyleAppBar(),
       ),
@@ -55,9 +59,16 @@ class _ListScreenState extends State<ListScreen>
               return Opacity(
                 opacity: value,
                 child: Transform.translate(
-                  // сдвиг вниз на 30px в начале, потом плавно подниматся на место
-                  offset: Offset(0, 30 * (1 - value)),
-                  child: WonderCard(wonder: wonder),
+                  offset: Offset(
+                    0,
+                    ResponsiveHelper.pad(context, 0.075) * (1 - value),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(
+                      ResponsiveHelper.pad(context, 0.04),
+                    ),
+                    child: WonderCard(wonder: wonder),
+                  ),
                 ),
               );
             },

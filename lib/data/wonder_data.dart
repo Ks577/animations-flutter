@@ -1,4 +1,4 @@
-import '../models/item_model.dart';
+import 'wonder_model.dart';
 
 final List<Wonder> allItems = [
   Wonder(

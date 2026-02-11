@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animations/const/colors.dart';
+import 'package:flutter_animations/core/theme/app_colors.dart';
 
 class StyleAppBar extends StatelessWidget {
   const StyleAppBar({super.key});

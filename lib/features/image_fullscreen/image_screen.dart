@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/item_model.dart';
+import 'package:flutter_animations/core/responsive/responsive.dart';
+import '../../data/wonder_model.dart';
 
 class ImageScreen extends StatelessWidget {
   final Wonder wonders;
@@ -19,7 +20,9 @@ class ImageScreen extends StatelessWidget {
             tag: wonders.imageUrl,
             child: InteractiveViewer(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(12.0),
+                borderRadius: BorderRadius.circular(
+                  ResponsiveHelper.radius(context, 0.02),
+                ),
                 child: Image.network(wonders.imageUrl, fit: BoxFit.contain),
               ),
             ),
