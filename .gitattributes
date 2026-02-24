@@ -1,4 +1,6 @@
 *.dart linguist-language=Dart
+lib/** linguist-language=Dart
+test/** linguist-language=Dart
 
 *.lock linguist-vendored
 *.png linguist-vendored
@@ -8,5 +10,6 @@
 *.gradle linguist-vendored
 *.iml linguist-vendored
 
-lib/** linguist-language=Dart
-test/** linguist-language=Dart
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.hpp linguist-vendored
