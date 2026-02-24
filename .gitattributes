@@ -1,0 +1,12 @@
+*.dart linguist-language=Dart
+
+*.lock linguist-vendored
+*.png linguist-vendored
+*.jpg linguist-vendored
+*.gif linguist-vendored
+*.mp4 linguist-vendored
+*.gradle linguist-vendored
+*.iml linguist-vendored
+
+lib/** linguist-language=Dart
+test/** linguist-language=Dart
